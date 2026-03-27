@@ -14,7 +14,6 @@ class EnrollmentController extends Controller
 {
     /**
      * Menampilkan daftar kursus yang sudah diikuti oleh siswa yang sedang login.
-     * (Display a listing of courses joined by the logged-in student.)
      */
     public function index(Request $request)
     {

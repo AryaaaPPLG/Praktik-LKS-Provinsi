@@ -8,7 +8,6 @@ class StoreEnrollmentRequest extends FormRequest
 {
     /**
      * Menentukan apakah pengguna diizinkan untuk membuat permintaan ini.
-     * (Determine if the user is authorized to make this request.)
      */
     public function authorize(): bool
     {
@@ -18,19 +17,17 @@ class StoreEnrollmentRequest extends FormRequest
 
     /**
      * Mendapatkan aturan validasi yang berlaku untuk permintaan ini.
-     * (Get the validation rules that apply to the request.)
      */
     public function rules(): array
     {
         return [
-            'course_id' => 'required|exists:courses,id', // Harus ada di tabel courses
-            'notes' => 'nullable|string', // Opsional, harus berupa string jika ada
+            'course_id' => 'required|exists:courses,id', 
+            'notes' => 'nullable|string', 
         ];
     }
 
     /**
      * Kustomisasi pesan kesalahan validasi dalam Bahasa Indonesia.
-     * (Customizing validation error messages in Indonesian.)
      */
     public function messages(): array
     {
